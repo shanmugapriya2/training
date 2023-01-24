@@ -5,8 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.Instagram.social.model.User;
 
-import java.util.Optional;
-
 @RestController
 @RequestMapping("user")
 public class UserController {
@@ -18,7 +16,7 @@ public class UserController {
         return "user with user id"+user.getUserId()+"created";
     }
     @GetMapping("/{User}")
-    public Optional<String> getUserById(@PathVariable String userId) throws Exception{
+    public User getUserById(@PathVariable String userId) throws Exception{
         return userService.getUserById(userId);
     }
     @GetMapping("/{Name}")
@@ -30,7 +28,6 @@ public class UserController {
         userService.followUser(userId,userIdToFollow);
         return "followed"+userIdToFollow;
     }
-
 
 
 }
