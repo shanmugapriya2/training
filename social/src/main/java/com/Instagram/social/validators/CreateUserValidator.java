@@ -24,7 +24,6 @@ public class CreateUserValidator {
     }
 
     public boolean isNameAvailable(String userName) {
-
         return (userRepository.findAll() != null);
 
     }

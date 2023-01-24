@@ -10,7 +10,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Document(collection = "Instagram")
+@Document(collection = "User")
 
 public class User {
     @Id

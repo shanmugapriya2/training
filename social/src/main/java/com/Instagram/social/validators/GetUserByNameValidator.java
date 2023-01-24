@@ -8,9 +8,7 @@ import org.springframework.stereotype.Service;
 public class GetUserByNameValidator {
     @Autowired
     UserRepository userRepository;
-    public void preValidateUserName(String userName) throws Exception{
-        isIdExit(userName);
-    }
+
     public void isIdExit(String userName)throws Exception{
         if(userRepository.getUserByName(userName)==null){
             throw new Exception("user with id"+userName+"is not found");

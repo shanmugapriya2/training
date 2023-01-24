@@ -14,5 +14,6 @@ public class PostService {
         PostRepository.CreatePost(userId,imageUrl);
         return "post created";
 
+
     }
 }
